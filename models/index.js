@@ -4,6 +4,8 @@ const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 
+// set up table associations
+
 // Products belongsTo Category
 Product.belongsTo(Category, { foreignKey: 'category_id', onDelete: 'cascade' });
 

@@ -27,6 +27,7 @@ router.get('/:id', (req, res) => {
       id: req.params.id
     }
   },
+  // Include Product model
     {
       include: {
         model: Product,
@@ -52,7 +53,7 @@ router.post('/', (req, res) => {
   Category.create({
     category_name: req.body.category_name
   })
-    .then(category => res.json(category)) // validate these, full function brackets needed
+    .then(category => res.json(category)) 
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
