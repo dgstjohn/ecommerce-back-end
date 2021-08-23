@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
       attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
     }
   })
-    .then(category => res.json(category)).
+    .then(category => res.json(category))
   .catch(err => {
       console.log(err);
       res.status(500).json(err);
